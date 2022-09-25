@@ -1,0 +1,20 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+        <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <div style="background: rgb(35, 109, 222);">
+        <!--div class="slds-card">
+            <div class="slds-p-around_medium">My Component</div>
+        </div>
+        <div class="slds-card">
+            <div class="slds-p-around_medium">   
+                <lightning:button variant="brand" label="Brand" title="Brand action" onclick="{! c.handleClick }" />
+            </div>
+            
+            <div class="slds-p-around_medium">   
+                <lightning:button variant="brand" label="Brand" title="Brand action" onclick="{! c.handleClick }" />
+            </div>
+            
+        </div-->
+<!--iframe src="https://lon.netverify.com/web/v4/app?authorizationToken=eyJhbGciOiJIUzUxMiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAAAB3MPwvCMBAF8O-S2UAuvcsfN4cKXRxKEZwkl6Tg0hbNoIjf3dPt8d6P91b1eWhqr8BZH8h0GGPs1E6loUhb2GVmsNqSA42BSXONkgpDMgbIVxCcxzqLbve0PFJut3W5gu3wt_xvEL3J2aOOMJPcmKoj-aDJMUFF69B4wdv02kSf-uncj8Pxoj5fkSH8MZ8AAAA.mVTv2JUJSWDWsAynTOQWeQKhSEN7u6Y8J_2bHLxeYGWOROmlJjivkYlFnpImo8WnXDdO89P44SQ59cztPLN9tg" width="930" height="750" allow="camera" title="KYC Scan"-->  
+    </div>
+</aura:component>

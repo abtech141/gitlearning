@@ -1,0 +1,60 @@
+<template>
+    <div class="">
+        <lightning-layout pull-to-boundary="small" multiple-rows="true">
+            <lightning-layout-item class="" padding="horizontal-small" size="2">
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-p-top_medium" size="9">
+                <div if:true={legend.Top} class="slds-grid slds-wrap">
+                    <template for:each={arrKeys} for:item="item" for:index="index">
+                        <div key={item} class="slds-col slds-var-p-vertical_x-small" style="display:flex;">
+                            <span class="color-dots" key={index}></span>
+                            <p class="legend-font slds-var-p-left_x-small">{item}</p>
+                        </div>
+                    </template>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item class="" padding="horizontal-small" size="2">
+            </lightning-layout-item>
+            <lightning-layout-item class="" padding="horizontal-small" style="margin-left: -5rem;margin-top: 3rem;"
+                size="3">
+                <div if:true={legend.Left} class="slds-p-top_x-small" style="margin-top: 2rem;">
+                    <template for:each={arrKeys} for:item="item" for:index="index">
+                        <div key={item} class="slds-var-p-vertical_x-small" style="display:flex">
+                            <div class="color-dots" key={index}></div>
+                            <p class="legend-font slds-var-p-left_x-small">{item}</p>
+                        </div>
+                    </template>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-align_absolute-center chartfix" padding="horizontal-small" size="4">
+                <div lwc:dom="manual" class="c1">
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-p-top_x-small" padding="horizontal-small" size="3"
+                style="margin-left: 28rem;">
+                <div if:true={legend.Right} class="slds-p-top_x-large">
+                    <template for:each={arrKeys} for:item="item" for:index="index">
+                        <div key={item} class="slds-var-p-vertical_x-small" style="display:flex">
+                            <div class="color-dots" key={index}></div>
+                            <p class="legend-font slds-var-p-left_x-small">{item}</p>
+                        </div>
+                    </template>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item class="" padding="horizontal-small" size="2">
+            </lightning-layout-item>
+            <lightning-layout-item class="" size="9" style="margin-top: 14rem;">
+                <div if:true={legend.Bottom} class="slds-grid slds-wrap slds-p-top_large">
+                    <template for:each={arrKeys} for:item="item" for:index="index">
+                        <div key={item} class="slds-col slds-var-p-vertical_x-small" style="display:flex">
+                            <div class="color-dots" key={index}></div>
+                            <p class="legend-font slds-var-p-left_x-small">{item}</p>
+                        </div>
+                    </template>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item class="" padding="horizontal-small" size="2">
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

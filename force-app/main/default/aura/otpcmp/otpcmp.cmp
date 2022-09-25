@@ -1,0 +1,70 @@
+<aura:component implements="lightning:isUrlAddressable,forceCommunity:availableForAllPageTypes" access="global" >
+     <aura:attribute name="showError" type="Boolean" required="true" description="" default="false" access="private"/>
+    <aura:attribute name="errorMessage" type="String" required="false" description="" access="private"/>
+    <aura:attribute name="startUrl" type="String" required="false" description="The url you go to after a successful login" />
+    <aura:attribute name="usernameLabel" type="String" required="false" default="Username"/>
+    <aura:attribute name="passwordLabel" type="String" required="false" default="Password"/>
+    <aura:attribute name="userN" type="String" required="false" default=""/>
+    <aura:attribute name="pass" type="String" required="false" default=""/>
+        <aura:attribute name="smsAlertMsg" type="string" default="" />
+    <aura:attribute name="smsAlertErrMsg" type="string" default="" />
+    <aura:attribute name="userContact" type="String" required="false" default=""/>
+     <aura:attribute name="maskedMobileNumber" type="string" default="" />
+    <aura:attribute name="loginButtonLabel" type="String" required="false" default="Log in"/>
+    <aura:attribute name="expid" type="String" required="false" description="The branding experience ID" />        
+    <aura:attribute name="forgotPasswordLabel" type="String" required="false" default="Forgot your password?"/>
+    <aura:attribute name="selfRegisterLabel" type="String" required="false" default="Not a member?"/>
+    <aura:attribute name="forgotPasswordUrl" type="String" required="false" default="/ForgotPassword"/>
+    <aura:attribute name="selfRegisterUrl" type="String" required="false" default="/SelfRegister"/>
+    <aura:attribute name="isUsernamePasswordEnabled" type="Boolean" access="private"/>
+    <aura:attribute name="isLoggedin" type="Boolean" default="false"/>
+    <aura:attribute name="isOTP" type="Boolean" default="true"/>
+    <aura:attribute name="resendOTP" type="Boolean" default="false"/>
+    <aura:attribute name="showOTPOptions" type="Boolean" default="false"/>
+	 <aura:attribute name="ShowModal" type="Boolean" default="false"/>
+    <aura:attribute name="showMobile" type="boolean" default="false" />
+    <aura:attribute name="smsError" type="Boolean" default="false" />
+     <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+      <aura:attribute name="DesktopUser" type="Boolean" default="false" />
+    <aura:attribute name="otpVal" type="String" default=""/>
+    <aura:attribute name="isSelfRegistrationEnabled" type="Boolean" access="private"/>
+    <aura:attribute name="communityForgotPasswordUrl" type="String" access="private"/>
+    <aura:attribute name="communitySelfRegisterUrl" type="String" access="private"/>
+    <aura:registerevent name="sitePropagatedStartUrl" type="c:setStartUrl"/>
+    <aura:dependency resource="c:setStartUrl" type="EVENT"/>
+        <div aura:id='mainBoxDiv' class="mainBox slds-box slds-p-top_large">   
+           
+    
+
+            
+
+                          
+                                  <input type="text" class="partitioned" id="OTP" maxlength="6" />
+                             		<div >
+									<lightning:layout horizontalAlign="space" >
+                                        	<lightning:layoutItem padding="around-small" class = "InputOTPCSS" >
+                                           <lightning:input type="number" size = "1" maxlength="1" onchange="{!c.nextotp}" aura:id="OTP1"/> 
+                                            </lightning:layoutItem>
+                                        	<lightning:layoutItem padding="around-small" class = "InputOTPCSS">
+                                            <lightning:input type="number" size = "1" maxlength="1" aura:id="OTP2"/>
+                                            </lightning:layoutItem>
+                                        	<lightning:layoutItem padding="around-small" class = "InputOTPCSS">
+                                           <lightning:input type="number" size = "1" maxlength="1" aura:id="OTP3"/> 
+                                            </lightning:layoutItem>
+                                        	<lightning:layoutItem padding="around-small" class = "InputOTPCSS">
+                                            <lightning:input type="number" size = "1" maxlength="1" aura:id="OTP4"/>
+                                            </lightning:layoutItem>
+                                        	<lightning:layoutItem padding="around-small" class = "InputOTPCSS">
+                                           <lightning:input type="number" size = "1" maxlength="1" aura:id="OTP5"/> 
+                                            </lightning:layoutItem>
+                                        	<lightning:layoutItem padding="around-small" class = "InputOTPCSS">
+                                            <lightning:input type="number" size = "1" maxlength="1" aura:id="OTP6"/>
+                                            </lightning:layoutItem>
+                                    </lightning:layout>
+                                    </div>
+                          
+
+
+        </div>
+
+</aura:component>

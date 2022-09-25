@@ -1,0 +1,14 @@
+.THIS .partitioned {
+  border: none;
+  width: 9ch;
+  background: 
+    repeating-linear-gradient(105deg, 
+        white 0, 
+        white 1ch, 
+        transparent 0, 
+        transparent 1.5ch) 
+      0 100%/100% 2px no-repeat;
+  font: 3ch consolas, monospace;
+  letter-spacing: .5ch;
+    color: white;
+}

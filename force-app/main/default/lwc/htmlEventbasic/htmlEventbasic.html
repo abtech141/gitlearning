@@ -1,0 +1,24 @@
+<template>
+    <div class="slds-m-around_small">
+        <lightning-input value={message} 
+        label="Event Demo" 
+        placeholder="enter event name" 
+         onchange={handleChange}   ></lightning-input>
+<template if:true={showtom}>
+         <p> Hi from Tom </p>
+        </template>
+    </div>
+    <div class="slds-m-around_small">
+<lightning-card title="For each Demo" icon-name="standard:contact" >
+<template for:each={contacts} for:item="item" for:index="index">
+<p class="slds-m-around_small" key={item.Id} >
+{index} - {item.Name} &nbsp; {item.Email}
+
+</p>
+
+</template>
+
+</lightning-card>
+
+    </div>
+</template>
