@@ -20,7 +20,7 @@ export default class DonutChartWithHover extends LightningElement {
   @track arcWidth=50;
   @track outerWidth=250;
 
-  //Comment from AB
+  //Comment from AB 1
   renderedCallback() {
     if (this.librariesLoaded)
       this.drawChart();
